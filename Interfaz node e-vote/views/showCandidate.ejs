@@ -1,0 +1,18 @@
+<h1>
+    Vas a votar a:
+</h1>
+
+<ul>
+    <li><b><%= candidato%></b></li>
+
+</ul>
+<ul>
+    <li><b>¿Estás seguro?</b></li>
+
+</ul>
+
+<a href="/validateVote"
+	onClick="return confirm('Una vez hayas confirmado no podrás cambiar tu voto. \n <%= candidato%>');">
+	<button>Validar voto</button>
+</a>
+<a href="/comprobate"><button>Invalidar y comprobar voto</button></a>

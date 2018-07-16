@@ -1,0 +1,23 @@
+<h1>
+    Questions:
+</h1>
+
+<table class="candidates">
+    <% for (var i in candidates) { %>
+    <% var candidate = candidates[i]; %>
+    <tr>
+
+        <td>
+		<form method="get" action="/vote" >
+			<input type="hidden" name="candidatoValue" value="<%= candidate.value%>"/>
+			<input type="hidden" name="candidatoName" value="<%= candidate.name%>"     />
+			<input type="submit" value="<%= candidate.name %>">
+
+		</form>
+
+        </td>
+
+    </tr>
+    <% } %>
+</table>
+
